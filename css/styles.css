@@ -16,6 +16,7 @@
     --background-image-gradient: #2f303a66;
     --team-icon: #AFB1B8;
     --background-social-footer: #ffffff1a;
+    --background-tasks: #2f303acc;
 }
 
 body {
@@ -78,10 +79,14 @@ body {
 .link {
     text-decoration: none;
     color: var(--almost-black);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
-.link:focus {
+.link:focus,
+.link:active {
     color: var(--blue);
 }
 
@@ -98,6 +103,8 @@ body {
 .contact-icon:hover,
 .contact-icon:focus {
     fill: var(--blue);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact {
@@ -118,6 +125,8 @@ body {
 .contact-item:hover,
 .contact-item:focus {
     color: var(--blue);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-content {
@@ -152,6 +161,8 @@ body {
     color: var(--white);
     background-color: var(--blue);
     box-shadow: 0px 3px 1px #0000001a, 0px 1px 2px #00000014, 0px 2px 2px #0000001f;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects {
@@ -170,6 +181,8 @@ body {
 .projects-list-item:hover,
 .projects-list-item:focus {
     box-shadow: 0px 1px 1px #0000001f, 0px 4px 4px #0000000f, 1px 4px 6px #00000029;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-photo {
@@ -205,7 +218,7 @@ body {
    background-image: linear-gradient(to bottom, var(--background-image-gradient), var(--background-image-gradient)), url(../images/background-image.jpg);
    background-position: center;
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size: 1600px;
 }
 
 .main-item {
@@ -225,6 +238,7 @@ body {
 }
 
 .service {
+    position: relative;
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.87;
@@ -352,7 +366,9 @@ body {
 }
 
 .team-icon {
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .team-social-icon:hover,
@@ -360,6 +376,8 @@ body {
     fill: var(--white);
     background-color: var(--blue);
     border-radius: 50%;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .studio-head {
@@ -387,6 +405,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
   
 .clients-item:last-child {
@@ -395,6 +414,8 @@ body {
   
 .clients-item:hover {
     border: 1px solid var(--blue);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
   
 .clients-icon {
@@ -403,6 +424,8 @@ body {
   
 .clients-item:hover .clients-icon {
     fill: var(--blue);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-content {
@@ -452,6 +475,8 @@ body {
 .footer-contact:hover,
 .footer-contact:focus {
     color: var(--blue);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social {
@@ -481,4 +506,149 @@ body {
   
 .footer-social-icon:hover {
     background-color: var(--blue);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.box-title {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-box-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    height: 70px;
+    background-color: var(--background-tasks);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.box-title-text {
+    padding-top: 27px;
+}
+
+.tasks-photos-item {
+    display: block;
+}
+
+.agency-active {
+    position: relative;
+    color: var(--blue);
+}
+
+.portfolio-active {
+    position: relative;
+    color: var(--blue);
+}
+
+.agency-active::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 53px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--blue);
+    border-radius: 2px;
+}
+
+.portfolio-active::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 53px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--blue);
+    border-radius: 2px;
+}
+
+.is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+  }
+  
+  .backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    z-index: 1;
+}
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--white);
+    box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px #00000033;
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+  
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.4);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+  
+  .modal-btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #0000001a;
+    background-color: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+  .projects-photo {
+    position: relative;
+    overflow: hidden;
+}
+
+  .projects-photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2196f3e6;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    transform: translateY(+101%);
+    transition: transform 250ms ease;
+}
+
+  .projects-photo-overlay p {
+    color: var(--white);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+  .projects-photo:hover 
+  .projects-photo-overlay {
+    transform: translateX(0);
+    transition: transform 250ms ease cubic-bezier(0.4, 0, 0.2, 1);
 }

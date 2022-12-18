@@ -24,8 +24,12 @@
           <a class="logo-header" href="index.html"><span class="web">Web</span>Studio</a>
           <nav>
             <ul class="nav-list">
-              <li class="nav-list-item"><a class="link" href="index.html">Agencja</a></li>
-              <li class="nav-list-item"><a class="link" href="portfolio.html">Portfolio</a></li>
+              <li class="nav-list-item">
+                <a class="link agency-active" href="index.html">Agencja</a>
+              </li>
+              <li class="nav-list-item">
+                <a class="link" href="portfolio.html">Portfolio</a>
+              </li>
               <li class="nav-list-item"><a class="link" href="#">Kontakt</a></li>
             </ul>
           </nav>
@@ -50,7 +54,12 @@
       <section class="content main-header">
         <div class="container main-item">
           <h1 class="caption">Efektywne rozwiązania dla waszego biznesu</h1>
-          <button class="service" type="button">Zamów usługę</button>
+          <button class="service" type="button" data-modal-open>Zamów usługę</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="modal-btn-close" data-modal-close>&times;</button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="content">
@@ -120,15 +129,41 @@
           <h2 class="tasks-item">Czym się zajmujemy</h2>
           <ul class="tasks-photos">
             <li>
-              <img src="images/tasks/computer-apps.jpg" alt="Osoba zajmująca się kodowaniem" />
+              <div class="box-title">
+                <img
+                  class="tasks-photos-item"
+                  src="images/tasks/computer-apps.jpg"
+                  alt="Osoba zajmująca się kodowaniem"
+                />
+                <div class="overlay-box-title">
+                  <p class="box-title-text">Aplikacje komputerowe</p>
+                </div>
+              </div>
             </li>
             <li>
-              <img
-                src="images/tasks/mobile-apps.jpg"
-                alt="Mężczyzna trzymający telefon, pracujący na laptopie"
-              />
+              <div class="box-title">
+                <img
+                  class="tasks-photos-item"
+                  src="images/tasks/mobile-apps.jpg"
+                  alt="Mężczyzna trzymający telefon, pracujący na laptopie"
+                />
+                <div class="overlay-box-title">
+                  <p class="box-title-text">Aplikacje mobilne</p>
+                </div>
+              </div>
             </li>
-            <li><img src="images/tasks/graphic-solutions.jpg" alt="Tablet z paletą barw" /></li>
+            <li>
+              <div class="box-title">
+                <img
+                  class="tasks-photos-item"
+                  src="images/tasks/graphic-solutions.jpg"
+                  alt="Tablet z paletą barw"
+                />
+                <div class="overlay-box-title">
+                  <p class="box-title-text">Rozwiązania graficzne</p>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
