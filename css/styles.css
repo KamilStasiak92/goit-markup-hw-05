@@ -100,11 +100,14 @@ body {
     margin-right: 10px;
 }
 
+.contact-icon {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .contact-icon:hover,
 .contact-icon:focus {
     fill: var(--blue);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact {
@@ -114,19 +117,21 @@ body {
     letter-spacing: 0.02em;
     align-items: space-between;
     fill: currentColor;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-item {
     text-decoration: none;
     color: var(--grey);
     margin: 0 25px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-item:hover,
 .contact-item:focus {
     color: var(--blue);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-content {
@@ -153,7 +158,8 @@ body {
     border-radius: 4px;
     background-color: var(--team-background);
     padding: 6px 22px;
-
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-button-item:hover,
@@ -161,8 +167,6 @@ body {
     color: var(--white);
     background-color: var(--blue);
     box-shadow: 0px 3px 1px #0000001a, 0px 1px 2px #00000014, 0px 2px 2px #0000001f;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects {
@@ -171,18 +175,19 @@ body {
     flex-wrap: wrap;
     gap: 30px;
     padding-top: 30px;
-}
+    }
 
 .projects-list-item {
+    position: relative;
+    overflow: hidden;
     background-color: var(--white);
-    border: 1px solid #EEE;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-list-item:hover,
 .projects-list-item:focus {
     box-shadow: 0px 1px 1px #0000001f, 0px 4px 4px #0000000f, 1px 4px 6px #00000029;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-photo {
@@ -191,6 +196,7 @@ body {
 
 .photo-sign {
     padding: 20px 24px;
+    border: 1px solid #EEE;
 }
 
 .projects-item {
@@ -213,7 +219,7 @@ body {
 }
 
 .main-header {
-   background-color: var(--dark-background);
+   padding-top: 0;
    text-align: center;
    background-image: linear-gradient(to bottom, var(--background-image-gradient), var(--background-image-gradient)), url(../images/background-image.jpg);
    background-position: center;
@@ -338,7 +344,6 @@ body {
     background-color: var(--white);
     box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px #00000024, 0px 2px 1px #00000033;
     border-radius: 0px 0px 4px 4px;
-
 }
 
 .container {
@@ -363,6 +368,9 @@ body {
 .team-social-icon {
     justify-content: center;
     fill: var(--team-icon);
+    border-radius: 50%;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon {
@@ -375,9 +383,6 @@ body {
 .team-social-icon:focus {
     fill: var(--white);
     background-color: var(--blue);
-    border-radius: 50%;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .studio-head {
@@ -406,6 +411,8 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
   
 .clients-item:last-child {
@@ -414,18 +421,16 @@ body {
   
 .clients-item:hover {
     border: 1px solid var(--blue);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
   
 .clients-icon {
     fill: var(--team-icon);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
   
 .clients-item:hover .clients-icon {
     fill: var(--blue);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-content {
@@ -470,13 +475,13 @@ body {
     text-decoration: none;
     color: var(--dark-white);
     padding-top: 9px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contact:hover,
 .footer-contact:focus {
     color: var(--blue);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social {
@@ -502,12 +507,12 @@ body {
     fill: var(--white);
     background-color: var(--background-social-footer);
     border-radius: 50%;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
   
 .footer-social-icon:hover {
     background-color: var(--blue);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .box-title {
@@ -647,8 +652,8 @@ body {
     padding-right: 24px;
 }
 
-  .projects-photo:hover 
+  .projects-list-item:hover 
   .projects-photo-overlay {
-    transform: translateX(0);
+    transform: translateY(0);
     transition: transform 250ms ease cubic-bezier(0.4, 0, 0.2, 1);
 }
